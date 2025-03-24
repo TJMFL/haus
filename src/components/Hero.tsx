@@ -38,13 +38,13 @@ const Hero = ({ className }: HeroProps) => {
       
       {/* Content */}
       <div className="w-full px-6 md:px-12 relative z-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="max-w-3xl">
+        <div className="max-w-7xl mx-auto px-0">
+          <div className="max-w-3xl px-0">
             <div className={cn(
               "transition-all duration-700 ease-out transform",
               isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             )}>
-              <p className="text-haus-gold uppercase tracking-widest text-sm mb-2 font-medium">
+              <p className="text-red-500 uppercase tracking-widest text-sm mb-2 font-medium drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">
                 Premium Transportation & Security
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
