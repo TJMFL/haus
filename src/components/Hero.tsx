@@ -48,7 +48,7 @@ const Hero = ({ className }: HeroProps) => {
                 Premium Transportation & Security
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-                Discreet Luxury at Your Service
+                Luxury at Your Service
               </h1>
               <p className="text-gray-300 text-lg mb-8 max-w-2xl">
                 Elite transportation and professional security services tailored for discerning clients who value privacy, reliability, and sophistication.
