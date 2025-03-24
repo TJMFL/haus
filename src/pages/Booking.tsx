@@ -1,10 +1,10 @@
+
 import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { format } from 'date-fns';
 import { Calendar as CalendarIcon, Check, ChevronRight } from 'lucide-react';
-import { CalendarDate } from '@internationalized/date';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 import {
@@ -110,8 +110,8 @@ const BookingForm = () => {
                     mode="single"
                     selected={field.value}
                     onSelect={field.onChange}
-                    disabled={(date: CalendarDate) =>
-                      date.compare(new Date()) < 0
+                    disabled={(date) =>
+                      date < new Date()
                     }
                     initialFocus
                   />
