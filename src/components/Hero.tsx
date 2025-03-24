@@ -31,7 +31,7 @@ const Hero = ({ className }: HeroProps) => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90 z-10" />
         <img
-          src="/lovable-uploads/4f29706d-0ffb-4b76-b0a5-9e5b37b52ff9.png"
+          src="/lovable-uploads/97ae4719-5b6e-4975-8783-098ea1b3c482.png"
           alt="Luxury Mercedes SUV"
           className="w-full h-full object-cover object-center"
         />
