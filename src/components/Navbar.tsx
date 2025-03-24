@@ -39,8 +39,8 @@ const Navbar = () => {
           <img 
             src="/navlogo.svg" 
             alt="Elite Ride Secure Logo" 
-            className="h-20 w-auto sm:h-24 md:h-28 lg:h-32" 
-            style={{ maxHeight: '8rem' }}
+            className="h-24 w-auto sm:h-28 md:h-36 lg:h-40" 
+            style={{ maxHeight: '12rem' }}
           />
         </Link>
         
