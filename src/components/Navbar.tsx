@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -30,15 +29,17 @@ const Navbar = () => {
   return (
     <nav 
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-6 py-4 lg:px-12',
+        'fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out px-6 py-4 lg:px-12',
         isScrolled ? 'bg-black/90 backdrop-blur-sm shadow-md' : 'bg-transparent'
       )}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <div className="w-full flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
-          <h1 className="text-xl font-medium text-white">
-            <span className="text-haus-gold">HAUS</span> Transportation & Security
-          </h1>
+          <img 
+            src="/navlogo.svg" 
+            alt="Elite Ride Secure Logo" 
+            className="h-12 w-auto" 
+          />
         </Link>
         
         {/* Desktop Menu */}
@@ -70,7 +71,7 @@ const Navbar = () => {
       
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-black/95 backdrop-blur-md border-t border-haus-700 animate-fade-in">
+        <div className="md:hidden absolute top-16 left-0 right-0 w-full bg-black/95 backdrop-blur-md border-t border-haus-700 animate-fade-in">
           <div className="flex flex-col p-4 space-y-4">
             {navLinks.map((link) => (
               <Link
