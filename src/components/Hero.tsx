@@ -37,9 +37,9 @@ const Hero = ({ className }: HeroProps) => {
       </div>
       
       {/* Content */}
-      <div className="w-full px-4 md:px-8 relative z-20">
+      <div className="w-full px-2 md:px-4 relative z-20">
         <div className="max-w-7xl mx-auto px-0">
-          <div className="max-w-3xl px-0 -mt-12">
+          <div className="max-w-3xl px-0 -mt-20">
             <div className={cn(
               "transition-all duration-700 ease-out transform",
               isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
