@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -38,7 +39,8 @@ const Navbar = () => {
           <img 
             src="/navlogo.svg" 
             alt="Elite Ride Secure Logo" 
-            className="h-12 w-auto" 
+            className="h-14 w-auto sm:h-16 md:h-18 lg:h-20" 
+            style={{ maxHeight: '5rem' }}
           />
         </Link>
         
