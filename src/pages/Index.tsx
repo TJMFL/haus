@@ -170,7 +170,174 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Remaining code stays the same... */}
+      {/* Services Section */}
+      <section ref={servicesRef} className="py-20 bg-black relative">
+        <div className="container max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-16">
+            <p className="text-haus-gold text-sm tracking-widest uppercase font-medium">Our Services</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">Premium Services Tailored to Your Needs</h2>
+            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+              We offer a comprehensive range of luxury transportation and security services customized to meet the unique requirements of our distinguished clientele.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                custom={index}
+                initial="hidden"
+                animate={servicesControls}
+                variants={fadeInUpVariant}
+                className="animate-fade-in"
+              >
+                <ServiceCard
+                  title={service.title}
+                  description={service.description}
+                  icon={service.icon}
+                  delay={index * 150}
+                />
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <Button 
+              asChild
+              className="bg-transparent border border-haus-gold text-haus-gold hover:bg-haus-gold/10 rounded-none luxury-transition"
+            >
+              <Link to="/services">
+                View All Services <ChevronRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+      
+      {/* Stats Section */}
+      <section ref={statsRef} className="py-16 bg-haus-900 relative">
+        <div className="container max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div
+              custom={0}
+              initial="hidden"
+              animate={statsControls}
+              variants={fadeInVariant}
+              className="text-center"
+            >
+              <div className="text-haus-gold text-3xl md:text-4xl font-bold mb-2">10+</div>
+              <p className="text-gray-400">Years Experience</p>
+            </motion.div>
+            
+            <motion.div
+              custom={1}
+              initial="hidden"
+              animate={statsControls}
+              variants={fadeInVariant}
+              className="text-center"
+            >
+              <div className="text-haus-gold text-3xl md:text-4xl font-bold mb-2">500+</div>
+              <p className="text-gray-400">Satisfied Clients</p>
+            </motion.div>
+            
+            <motion.div
+              custom={2}
+              initial="hidden"
+              animate={statsControls}
+              variants={fadeInVariant}
+              className="text-center"
+            >
+              <div className="text-haus-gold text-3xl md:text-4xl font-bold mb-2">24/7</div>
+              <p className="text-gray-400">Service Availability</p>
+            </motion.div>
+            
+            <motion.div
+              custom={3}
+              initial="hidden"
+              animate={statsControls}
+              variants={fadeInVariant}
+              className="text-center"
+            >
+              <div className="text-haus-gold text-3xl md:text-4xl font-bold mb-2">100%</div>
+              <p className="text-gray-400">Client Satisfaction</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Testimonials Section */}
+      <section ref={testimonialsRef} className="py-20 bg-black relative">
+        <div className="container max-w-7xl mx-auto px-6 md:px-12">
+          <div className="text-center mb-16">
+            <p className="text-haus-gold text-sm tracking-widest uppercase font-medium">Testimonials</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">What Our Clients Say</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                custom={index}
+                initial="hidden"
+                animate={testimonialsControls}
+                variants={fadeInUpVariant}
+              >
+                <Card className="glass-card border-0 h-full">
+                  <CardContent className="p-6 md:p-8">
+                    <div className="text-haus-gold mb-6">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
+                        <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                      </svg>
+                    </div>
+                    <p className="text-gray-300 mb-6 italic">"{testimonial.quote}"</p>
+                    <div>
+                      <p className="text-white font-semibold">{testimonial.author}</p>
+                      <p className="text-gray-500 text-sm">{testimonial.company}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-b from-haus-900 to-black relative overflow-hidden">
+        <div className="container max-w-7xl mx-auto px-6 md:px-12">
+          <div className="glass-card relative overflow-hidden luxury-shadow">
+            <div className="absolute inset-0 opacity-10 dot-pattern"></div>
+            <div className="p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-8 relative z-10">
+              <div className="max-w-xl">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Experience Elite Service?</h2>
+                <p className="text-gray-300">
+                  Contact us today to discuss your transportation and security needs. Our team is standing by to provide a tailored solution that exceeds your expectations.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button 
+                  asChild
+                  className="bg-haus-burgundy hover:bg-haus-burgundy/90 text-white rounded-none px-8 py-6 luxury-transition"
+                >
+                  <Link to="/booking">
+                    Book Now
+                  </Link>
+                </Button>
+                <Button 
+                  asChild
+                  variant="outline" 
+                  className="bg-transparent border-white/30 hover:bg-white/10 text-white rounded-none px-8 py-6 luxury-transition"
+                >
+                  <Link to="/contact">
+                    Contact Us
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <Footer />
     </div>
