@@ -218,7 +218,7 @@ const Index = () => {
               variants={fadeInVariant}
               className="text-center"
             >
-              <div className="text-red-500 text-3xl md:text-4xl font-bold mb-2">10+</div>
+              <div className="text-red-500 text-3xl md:text-4xl font-bold mb-2">25+</div>
               <p className="text-gray-400">Years Experience</p>
             </motion.div>
             
