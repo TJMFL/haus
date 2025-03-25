@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -143,7 +142,7 @@ const ServiceOption: React.FC<ServiceOptionProps> = ({ value, label, icon }) => 
       className="flex cursor-pointer items-center p-4 rounded-lg border border-secondary
                  peer-checked:bg-accent peer-checked:text-accent-foreground"
     >
-      <div className="mr-4 text-haus-gold">
+      <div className="mr-4 text-red-500">
         {icon}
       </div>
       {label}
@@ -157,7 +156,7 @@ const Booking = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative w-full h-screen overflow-hidden flex items-center justify-center">
+      <section className="relative w-full h-screen overflow-hidden flex items-start justify-start">
         {/* Hero Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90 z-10" />
@@ -169,9 +168,9 @@ const Booking = () => {
         </div>
 
         {/* Content */}
-        <div className="container relative z-20 px-6 md:px-12 max-w-7xl mx-auto">
+        <div className="container relative z-20 px-6 md:px-12 pt-20 md:pt-32 lg:pt-40">
           <div className="max-w-3xl">
-            <p className="text-haus-gold uppercase tracking-widest text-sm mb-2 font-medium">
+            <p className="text-red-500 uppercase tracking-widest text-sm mb-2 font-medium">
               Book Our Services
             </p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
