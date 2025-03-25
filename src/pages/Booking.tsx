@@ -168,7 +168,7 @@ const Booking = () => {
         </div>
 
         {/* Content */}
-        <div className="container relative z-20 px-4 md:px-8 pt-40 md:pt-56 lg:pt-72">
+        <div className="container relative z-20 px-2 md:px-4 pt-40 md:pt-56 lg:pt-72">
           <div className="max-w-3xl">
             <p className="text-red-500 uppercase tracking-widest text-sm mb-2 font-medium">
               Book Our Services
