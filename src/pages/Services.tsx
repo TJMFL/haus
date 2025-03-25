@@ -1,4 +1,3 @@
-
 import { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -143,7 +142,7 @@ const Services = () => {
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-black relative">
         <div className="container max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center">
-            <p className="text-haus-gold text-sm tracking-widest uppercase font-medium animate-fade-in">Luxury and Discretion</p>
+            <p className="text-red-500 text-sm tracking-widest uppercase font-medium animate-fade-in">Luxury and Discretion</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4 animate-fade-in" style={{ animationDelay: '100ms' }}>
               Our Premium Services
             </h1>
@@ -165,35 +164,35 @@ const Services = () => {
               custom={0}
               className="space-y-6"
             >
-              <p className="text-haus-gold text-sm tracking-widest uppercase font-medium">Transportation Services</p>
+              <p className="text-red-500 text-sm tracking-widest uppercase font-medium">Transportation Services</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Elite Transportation for Discerning Clients</h2>
               <p className="text-gray-400 leading-relaxed">
                 Our fleet of luxury vehicles and professional chauffeurs provide an unparalleled transportation experience. Whether you need a single ride or a recurring schedule, we offer flexibility to accommodate your needs.
               </p>
               <div className="space-y-4 pt-4">
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-haus-gold mt-1 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-1 mr-3" />
                   <div>
                     <h4 className="text-white font-medium">Premium Fleet</h4>
                     <p className="text-gray-400 text-sm">Late-model luxury vehicles meticulously maintained for comfort and safety</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-haus-gold mt-1 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-1 mr-3" />
                   <div>
                     <h4 className="text-white font-medium">Professional Chauffeurs</h4>
                     <p className="text-gray-400 text-sm">Experienced, discreet, and professionally trained to provide exceptional service</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-haus-gold mt-1 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-1 mr-3" />
                   <div>
                     <h4 className="text-white font-medium">Flexible Scheduling</h4>
                     <p className="text-gray-400 text-sm">Book single rides or set up recurring daily, weekly, or monthly schedules</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-haus-gold mt-1 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-1 mr-3" />
                   <div>
                     <h4 className="text-white font-medium">Customized Experience</h4>
                     <p className="text-gray-400 text-sm">Tailored service to meet your specific preferences and requirements</p>
@@ -218,7 +217,7 @@ const Services = () => {
             >
               {transportationServices.map((service, index) => (
                 <div key={index} className="glass-card p-6 flex flex-col h-full">
-                  <div className="mb-4 text-haus-gold">
+                  <div className="mb-4 text-red-500">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-white">
@@ -247,7 +246,7 @@ const Services = () => {
             >
               {securityServices.map((service, index) => (
                 <div key={index} className="glass-card p-6 flex flex-col h-full">
-                  <div className="mb-4 text-haus-gold">
+                  <div className="mb-4 text-red-500">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-white">
@@ -267,35 +266,35 @@ const Services = () => {
               custom={0}
               className="order-1 md:order-2 space-y-6"
             >
-              <p className="text-haus-gold text-sm tracking-widest uppercase font-medium">Security Services</p>
+              <p className="text-red-500 text-sm tracking-widest uppercase font-medium">Security Services</p>
               <h2 className="text-3xl md:text-4xl font-bold text-white">Professional Security by Veterans</h2>
               <p className="text-gray-400 leading-relaxed">
                 Our security team, led by a Marine veteran, brings military-grade training and expertise to civilian security. We offer discreet protection services that prioritize your safety without compromising your lifestyle.
               </p>
               <div className="space-y-4 pt-4">
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-haus-gold mt-1 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-1 mr-3" />
                   <div>
                     <h4 className="text-white font-medium">Veteran-Led Team</h4>
                     <p className="text-gray-400 text-sm">Security professionals with military and law enforcement backgrounds</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-haus-gold mt-1 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-1 mr-3" />
                   <div>
                     <h4 className="text-white font-medium">Discreet Protection</h4>
                     <p className="text-gray-400 text-sm">Unobtrusive security that maintains your privacy and normal routine</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-haus-gold mt-1 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-1 mr-3" />
                   <div>
                     <h4 className="text-white font-medium">Risk Assessment</h4>
                     <p className="text-gray-400 text-sm">Thorough evaluation of potential security concerns tailored to your situation</p>
                   </div>
                 </div>
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-haus-gold mt-1 mr-3" />
+                  <CheckCircle className="h-5 w-5 text-red-500 mt-1 mr-3" />
                   <div>
                     <h4 className="text-white font-medium">Customized Security Plans</h4>
                     <p className="text-gray-400 text-sm">Personalized security strategies based on your specific needs and lifestyle</p>
@@ -318,7 +317,7 @@ const Services = () => {
       <section ref={featuresRef} className="py-20 bg-haus-900 relative">
         <div className="container max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <p className="text-haus-gold text-sm tracking-widest uppercase font-medium">Why Choose Us</p>
+            <p className="text-red-500 text-sm tracking-widest uppercase font-medium">Why Choose Us</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">The HAUS Difference</h2>
             <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
               Our commitment to excellence sets us apart in the industry, providing unmatched service quality for our clientele.
@@ -333,7 +332,7 @@ const Services = () => {
               custom={0}
               className="glass-card p-8 flex flex-col items-center text-center"
             >
-              <div className="mb-6 text-haus-gold">
+              <div className="mb-6 text-red-500">
                 <Shield size={48} />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white">Military Experience</h3>
@@ -349,7 +348,7 @@ const Services = () => {
               custom={1}
               className="glass-card p-8 flex flex-col items-center text-center"
             >
-              <div className="mb-6 text-haus-gold">
+              <div className="mb-6 text-red-500">
                 <Clock size={48} />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white">24/7 Availability</h3>
@@ -365,7 +364,7 @@ const Services = () => {
               custom={2}
               className="glass-card p-8 flex flex-col items-center text-center"
             >
-              <div className="mb-6 text-haus-gold">
+              <div className="mb-6 text-red-500">
                 <Users size={48} />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white">Discreet Professionals</h3>
@@ -381,7 +380,7 @@ const Services = () => {
               custom={3}
               className="glass-card p-8 flex flex-col items-center text-center"
             >
-              <div className="mb-6 text-haus-gold">
+              <div className="mb-6 text-red-500">
                 <Car size={48} />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white">Premium Fleet</h3>
@@ -397,7 +396,7 @@ const Services = () => {
               custom={4}
               className="glass-card p-8 flex flex-col items-center text-center"
             >
-              <div className="mb-6 text-haus-gold">
+              <div className="mb-6 text-red-500">
                 <Map size={48} />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white">Global Network</h3>
@@ -413,7 +412,7 @@ const Services = () => {
               custom={5}
               className="glass-card p-8 flex flex-col items-center text-center"
             >
-              <div className="mb-6 text-haus-gold">
+              <div className="mb-6 text-red-500">
                 <Briefcase size={48} />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white">Tailored Solutions</h3>
