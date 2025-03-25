@@ -80,11 +80,6 @@ const Hero = ({ className }: HeroProps) => {
           </div>
         </div>
       </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <div className="w-0.5 h-16 bg-gradient-to-b from-white/0 via-white/50 to-white/0 animate-pulse-subtle"></div>
-      </div>
     </div>
   );
 };
