@@ -22,7 +22,7 @@ const Hero = ({ className }: HeroProps) => {
   return (
     <div 
       className={cn(
-        "relative w-full h-screen overflow-hidden flex items-start justify-center pt-32",
+        "relative w-full h-screen overflow-hidden flex items-start justify-center pt-40", // Changed pt-32 to pt-40
         className
       )}
     >
@@ -38,13 +38,13 @@ const Hero = ({ className }: HeroProps) => {
       
       {/* Content */}
       <div className="w-full pl-6 relative z-20">
-        {/* Upper text stays at current position */}
+        {/* Upper text */}
         <p className="text-red-500 uppercase tracking-widest text-sm mb-2 font-medium drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">
           Premium Transportation & Security
         </p>
         
-        {/* Rest of content moved lower */}
-        <div className="mt-12"> {/* Added mt-12 to push this section down */}
+        {/* Rest of content */}
+        <div className="mt-12">
           <div className={cn(
             "transition-all duration-700 ease-out transform",
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
