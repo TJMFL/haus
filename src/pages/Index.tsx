@@ -89,7 +89,7 @@ const Index = () => {
       company: "Luxury Events International"
     },
     {
-      quote: "As a traveling executive, I need reliable and secure transportation. HAUS has consistently exceeded my expectations with their punctuality and professionalism.",
+      quote: "As a traveling executive, I need reliable and secure transportationcina. HAUS has consistently exceeded my expectations with their punctuality and professionalism.",
       author: "Michael R., CEO",
       company: "Global Investments Corp"
     },
@@ -131,11 +131,11 @@ const Index = () => {
       <Hero />
       
       {/* About Section */}
-      <section className="py-20 bg-haus-900 relative">
+      <section className="py-20 bg-black relative">
         <div className="container max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-haus-gold text-sm tracking-widest uppercase font-medium"></p>
+              <p className="text-red-500 text-sm tracking-widest uppercase font-medium"></p>
               <h2 className="text-3xl md:text-4xl font-bold text-white">The Vision Behind Haus Transportation and Security</h2>
               <p className="text-gray-400 leading-relaxed">
                 Haus Transportation and Security was built on a foundation of discipline, precision, and unwavering commitment to safety—principles deeply ingrained in its founder, Rich Cartolano. As a United States Marine Corps veteran and licensed security professional with 25 years of experience, Rich has spent his career mastering the skills necessary to protect, transport, and serve high-profile individuals with the highest level of discretion and professionalism.
@@ -146,13 +146,6 @@ const Index = () => {
               <p className="text-gray-400 leading-relaxed">
                 At Haus, security is not just about protection—it's about creating a seamless, stress-free experience where clients feel both safe and valued. This commitment to excellence ensures that every ride is more than just transportation; it's a secure, first-class experience tailored for those who demand the best.
               </p>
-              <div className="pt-4">
-                <Button asChild className="bg-haus-burgundy hover:bg-haus-burgundy/90 text-white rounded-none luxury-transition">
-                  <Link to="/services">
-                    Learn More About Our Services <ChevronRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
             </div>
             <div className="relative h-[400px] md:h-[500px]">
               <div className="absolute inset-0 glass-card overflow-hidden dot-pattern">
@@ -174,7 +167,7 @@ const Index = () => {
       <section ref={servicesRef} className="py-20 bg-black relative">
         <div className="container max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <p className="text-haus-gold text-sm tracking-widest uppercase font-medium">Our Services</p>
+            <p className="text-red-500 text-sm tracking-widest uppercase font-medium">Our Services</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">Premium Services Tailored to Your Needs</h2>
             <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
               We offer a comprehensive range of luxury transportation and security services customized to meet the unique requirements of our distinguished clientele.
@@ -204,7 +197,7 @@ const Index = () => {
           <div className="mt-12 text-center">
             <Button 
               asChild
-              className="bg-transparent border border-haus-gold text-haus-gold hover:bg-haus-gold/10 rounded-none luxury-transition"
+              className="bg-transparent border border-red-500 text-red-500 hover:bg-red-500/10 rounded-none luxury-transition"
             >
               <Link to="/services">
                 View All Services <ChevronRight className="ml-2 h-4 w-4" />
@@ -225,7 +218,7 @@ const Index = () => {
               variants={fadeInVariant}
               className="text-center"
             >
-              <div className="text-haus-gold text-3xl md:text-4xl font-bold mb-2">10+</div>
+              <div className="text-red-500 text-3xl md:text-4xl font-bold mb-2">10+</div>
               <p className="text-gray-400">Years Experience</p>
             </motion.div>
             
@@ -236,7 +229,7 @@ const Index = () => {
               variants={fadeInVariant}
               className="text-center"
             >
-              <div className="text-haus-gold text-3xl md:text-4xl font-bold mb-2">500+</div>
+              <div className="text-red-500 text-3xl md:text-4xl font-bold mb-2">500+</div>
               <p className="text-gray-400">Satisfied Clients</p>
             </motion.div>
             
@@ -247,7 +240,7 @@ const Index = () => {
               variants={fadeInVariant}
               className="text-center"
             >
-              <div className="text-haus-gold text-3xl md:text-4xl font-bold mb-2">24/7</div>
+              <div className="text-red-500 text-3xl md:text-4xl font-bold mb-2">24/7</div>
               <p className="text-gray-400">Service Availability</p>
             </motion.div>
             
@@ -258,7 +251,7 @@ const Index = () => {
               variants={fadeInVariant}
               className="text-center"
             >
-              <div className="text-haus-gold text-3xl md:text-4xl font-bold mb-2">100%</div>
+              <div className="text-red-500 text-3xl md:text-4xl font-bold mb-2">100%</div>
               <p className="text-gray-400">Client Satisfaction</p>
             </motion.div>
           </div>
@@ -269,7 +262,7 @@ const Index = () => {
       <section ref={testimonialsRef} className="py-20 bg-black relative">
         <div className="container max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <p className="text-haus-gold text-sm tracking-widest uppercase font-medium">Testimonials</p>
+            <p className="text-red-500 text-sm tracking-widest uppercase font-medium">Testimonials</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">What Our Clients Say</h2>
           </div>
           
@@ -284,7 +277,7 @@ const Index = () => {
               >
                 <Card className="glass-card border-0 h-full">
                   <CardContent className="p-6 md:p-8">
-                    <div className="text-haus-gold mb-6">
+                    <div className="text-red-500 mb-6">
                       <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path>
                         <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
