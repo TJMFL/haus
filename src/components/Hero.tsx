@@ -22,7 +22,7 @@ const Hero = ({ className }: HeroProps) => {
   return (
     <div 
       className={cn(
-        "relative w-full h-screen overflow-hidden flex items-center justify-center",
+        "relative w-full h-screen overflow-hidden flex items-start justify-center pt-20", // Changed items-center to items-start and added pt-20
         className
       )}
     >
@@ -37,9 +37,9 @@ const Hero = ({ className }: HeroProps) => {
       </div>
       
       {/* Content */}
-      <div className="w-full px-0 relative z-20">
-        <div className="px-0">
-          <div className="px-0">
+      <div className="w-full pl-6 relative z-20"> {/* Changed px-0 to pl-6 for left padding */}
+        <div className="pl-0">
+          <div className="pl-0">
             <div className={cn(
               "transition-all duration-700 ease-out transform",
               isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
