@@ -89,7 +89,7 @@ const Index = () => {
       company: "Luxury Events International"
     },
     {
-      quote: "As a traveling executive, I need reliable and secure transportationcina. HAUS has consistently exceeded my expectations with their punctuality and professionalism.",
+      quote: "As a traveling executive, I need reliable and secure transportation. HAUS has consistently exceeded my expectations with their punctuality and professionalism.",
       author: "Michael R., CEO",
       company: "Global Investments Corp"
     },
@@ -132,8 +132,8 @@ const Index = () => {
       
       {/* About Section */}
       <section className="py-20 bg-black relative">
-        <div className="container max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="w-full px-6 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             <div className="space-y-6">
               <p className="text-red-500 text-sm tracking-widest uppercase font-medium"></p>
               <h2 className="text-3xl md:text-4xl font-bold text-white">The Vision Behind Haus Transportation and Security</h2>
