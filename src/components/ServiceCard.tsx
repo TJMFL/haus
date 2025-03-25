@@ -1,4 +1,3 @@
-
 import { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -28,10 +27,10 @@ const ServiceCard = ({
         animationFillMode: 'both' 
       }}
     >
-      <div className="mb-4 text-haus-gold">
+      <div className="mb-4 text-red-500">
         {icon}
       </div>
-      <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-haus-gold transition-colors duration-300">
+      <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-red-500 transition-colors duration-300">
         {title}
       </h3>
       <p className="text-gray-400 flex-grow">
