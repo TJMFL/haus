@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
@@ -85,19 +84,19 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-4">Contact Information</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-haus-gold mr-2 mt-0.5" />
-                <span className="text-gray-400">1234 Luxury Avenue, Suite 500<br />Los Angeles, CA 90210</span>
+                <MapPin className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
+                <span className="text-gray-400">1234 Protection Dr, Suite 500<br />Chicago, IL 60654</span>
               </li>
               <li className="flex items-center">
-                <Phone className="h-5 w-5 text-haus-gold mr-2" />
-                <a href="tel:+11234567890" className="text-gray-400 hover:text-white transition-colors">+1 (123) 456-7890</a>
+                <Phone className="h-5 w-5 text-red-500 mr-2" />
+                <a href="tel:+19546614434" className="text-gray-400 hover:text-white transition-colors">+1 (123) 456-7890</a>
               </li>
               <li className="flex items-center">
-                <Mail className="h-5 w-5 text-haus-gold mr-2" />
+                <Mail className="h-5 w-5 text-red-500 mr-2" />
                 <a href="mailto:info@haustransport.com" className="text-gray-400 hover:text-white transition-colors">info@haustransport.com</a>
               </li>
               <li className="flex items-start">
-                <Clock className="h-5 w-5 text-haus-gold mr-2 mt-0.5" />
+                <Clock className="h-5 w-5 text-red-500 mr-2 mt-0.5" />
                 <span className="text-gray-400">
                   24/7 Availability<br />
                   <span className="text-sm">Always at your service</span>
@@ -109,7 +108,7 @@ const Footer = () => {
         
         <div className="border-t border-haus-800 mt-10 pt-6">
           <p className="text-gray-500 text-center text-sm">
-            &copy; {currentYear} HAUS Transportation & Security. All rights reserved.
+            © {currentYear} HAUS Transportation & Security. All rights reserved.
           </p>
         </div>
       </div>
