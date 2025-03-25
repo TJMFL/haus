@@ -135,7 +135,7 @@ const Index = () => {
         <div className="container max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-haus-gold text-sm tracking-widest uppercase font-medium">About HAUS</p>
+              <p className="text-haus-gold text-sm tracking-widest uppercase font-medium"></p>
               <h2 className="text-3xl md:text-4xl font-bold text-white">The Vision Behind Haus Transportation and Security</h2>
               <p className="text-gray-400 leading-relaxed">
                 Haus Transportation and Security was built on a foundation of discipline, precision, and unwavering commitment to safety—principles deeply ingrained in its founder, Rich Cartolano. As a United States Marine Corps veteran and licensed security professional with 25 years of experience, Rich has spent his career mastering the skills necessary to protect, transport, and serve high-profile individuals with the highest level of discretion and professionalism.
