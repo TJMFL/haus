@@ -22,7 +22,7 @@ const Hero = ({ className }: HeroProps) => {
   return (
     <div 
       className={cn(
-        "relative w-full h-screen overflow-hidden flex items-start justify-center pt-32", // Changed pt-24 to pt-32
+        "relative w-full h-screen overflow-hidden flex items-start justify-center pt-40", // Changed pt-24 to pt-32
         className
       )}
     >
