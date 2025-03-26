@@ -4,7 +4,6 @@ import { ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-// Type definition for component props
 interface HeroProps {
   className?: string;
 }
@@ -16,7 +15,6 @@ const Hero = ({ className }: HeroProps) => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 100);
-    
     return () => clearTimeout(timer);
   }, []);
   
@@ -27,7 +25,6 @@ const Hero = ({ className }: HeroProps) => {
         className
       )}
     >
-      {/* Hero Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90 z-10" />
         <picture>
@@ -45,9 +42,7 @@ const Hero = ({ className }: HeroProps) => {
         </picture>
       </div>
       
-      {/* Content */}
       <div className="w-full pl-6 relative z-20">
-        {/* Refined Subtitle with White Text and Intense Red Glow */}
         <p className={`
           text-white 
           uppercase 
@@ -55,12 +50,11 @@ const Hero = ({ className }: HeroProps) => {
           text-sm 
           mb-2 
           font-semibold 
-          drop-shadow-[0_0_10px_theme('colors.haus-burgundy')]
+          shadow-burgundy
         `}>
           Premium Transportation & Security
         </p>
         
-        {/* Rest of content */}
         <div className="mt-12">
           <div className={cn(
             "transition-all duration-700 ease-out transform",
@@ -108,9 +102,9 @@ const Hero = ({ className }: HeroProps) => {
                 className="bg-white/10 border-white/20 hover:bg-white/20 text-haus-burgundy rounded-none luxury-transition"
               >
                 <Link to="/risk-assessment">
-                  <span className="text-haus-burgundy drop-shadow-[0_0_5px_theme('colors.haus-burgundy')]">
+                  <span className="text-haus-burgundy shadow-burgundy">
                     Free Custom HAUS Elite Plan
-                  </span> 
+                  </span>
                 </Link>
               </Button>
             </div>
