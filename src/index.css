@@ -70,7 +70,7 @@
   }
   
   .shadow-burgundy {
-    filter: drop-shadow(0 0 15px #ffff00);
+    filter: drop-shadow(0 0 15px theme('colors.haus-burgundy'));
   }
   
   .shadow-burgundy-sm {
