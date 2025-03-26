@@ -105,10 +105,10 @@ const Hero = ({ className }: HeroProps) => {
                 asChild
                 variant="outline" 
                 size="lg" 
-                className="bg-white/10 border-white/20 hover:bg-white/20 text-white rounded-none luxury-transition"
+                className="bg-white/10 border-white/20 hover:bg-white/20 text-haus-burgundy rounded-none luxury-transition"
               >
                 <Link to="/risk-assessment">
-                  <span className="text-white drop-shadow-[0_0_5px_theme('colors.haus-burgundy')]">
+                  <span className="text-haus-burgundy drop-shadow-[0_0_5px_theme('colors.haus-burgundy')]">
                     Free Custom HAUS Elite Plan
                   </span> 
                 </Link>
