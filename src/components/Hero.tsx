@@ -47,15 +47,15 @@ const Hero = ({ className }: HeroProps) => {
       
       {/* Content */}
       <div className="w-full pl-6 relative z-20">
-        {/* Refined Subtitle */}
+        {/* Refined Subtitle with White Text and Red Glow */}
         <p className={`
-          text-haus-burgundy 
+          text-white 
           uppercase 
           tracking-widest 
           text-sm 
           mb-2 
           font-semibold 
-          text-shadow-[0_1px_3px_rgba(255,255,255,0.5)]
+          drop-shadow-[0_0_5px_theme('colors.haus-burgundy')]
         `}>
           Premium Transportation & Security
         </p>
