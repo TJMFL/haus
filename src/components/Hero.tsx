@@ -102,7 +102,7 @@ const Hero = ({ className }: HeroProps) => {
                 className="bg-white/10 border-white/20 hover:bg-white/20 text-haus-burgundy rounded-none luxury-transition"
               >
                 <Link to="/risk-assessment">
-                  <span className="text-haus-burgundy [text-shadow:0_0_2px_rgba(255,255,255,0.8)]">
+                  <span className="text-haus-burgundy">
                     Free Custom HAUS Elite Plan
                   </span>
                 </Link>
