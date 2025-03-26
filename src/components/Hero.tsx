@@ -22,7 +22,7 @@ const Hero = ({ className }: HeroProps) => {
   return (
     <div 
       className={cn(
-        "relative w-full h-screen overflow-hidden flex items-start justify-center pt-40", // Changed pt-32 to pt-40
+        "relative w-full h-screen overflow-hidden flex items-start justify-center pt-40",
         className
       )}
     >
@@ -39,7 +39,7 @@ const Hero = ({ className }: HeroProps) => {
       {/* Content */}
       <div className="w-full pl-6 relative z-20">
         {/* Upper text */}
-        <p className="text-red-500 uppercase tracking-widest text-sm mb-2 font-medium drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">
+        <p className="text-haus-burgundy uppercase tracking-widest text-sm mb-2 font-medium drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">
           Premium Transportation & Security
         </p>
         
@@ -72,8 +72,8 @@ const Hero = ({ className }: HeroProps) => {
                 size="lg" 
                 className="bg-transparent border-white/30 hover:bg-white/10 text-white rounded-none luxury-transition"
               >
-                <Link to="/services">
-                  Explore Services
+                <Link to="/risk-assessment">
+                  <span className="text-haus-burgundy">Free Custom HAUS Elite Plan</span> 
                 </Link>
               </Button>
             </div>
