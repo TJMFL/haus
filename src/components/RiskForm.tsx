@@ -5,15 +5,14 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { ChevronRight, Shield } from 'lucide-react';
-import Navbar from './Navbar'; // Adjust path if needed (e.g., '../components/Navbar')
+import Navbar from './Navbar';
 
 const RiskForm: React.FC = () => {
   const [whoYouAre, setWhoYouAre] = useState('Professional');
   const [whatYouNeed, setWhatYouNeed] = useState('Executive Transportation');
   const [otherSpecifics, setOtherSpecifics] = useState('');
-  const [when, setWhen] = useState('');
-  const [where, setWhere] = useState('');
-  const [priority, setPriority] = useState('Luxury');
+  const [briefDescription, setBriefDescription] = useState('');
+  const [priorities, setPriorities] = useState<string[]>([]);
   const [report, setReport] = useState<string | null>(null);
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
@@ -53,6 +52,12 @@ const RiskForm: React.FC = () => {
     setLogs((prev) => [...prev, `${new Date().toLocaleTimeString()} - ${message}`]);
   };
 
+  const handlePriorityChange = (priority: string) => {
+    setPriorities((prev) =>
+      prev.includes(priority) ? prev.filter((p) => p !== priority) : [...prev, priority]
+    );
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -67,9 +72,8 @@ const RiskForm: React.FC = () => {
         whoYouAre,
         whatYouNeed,
         briefSpecifics: specifics,
-        when,
-        where,
-        priority,
+        briefDescription,
+        priority: priorities.join(', '),
       });
       if (!reportText || reportText.includes('Error')) {
         throw new Error('HAUS AI failed to generate plan');
@@ -87,33 +91,28 @@ const RiskForm: React.FC = () => {
   const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Email submitted:', email);
-    // Add email submission logic here (e.g., API call)
     setEmail('');
   };
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Reusable Navbar */}
       <Navbar />
-
-      {/* Main Content */}
-      <section className="pt-44 pb-16 bg-black">
+      <section className="pt-24 pb-16 bg-black">
         <div className="container max-w-7xl mx-auto px-6 md:px-12 text-center">
           <p className="text-haus-burgundy text-sm tracking-widest uppercase font-medium animate-fade-in">
-            HAUS Luxury Elite 
+            HAUS Elite Protection
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-gold mt-4 animate-fade-in" style={{ animationDelay: '100ms' }}>
-            Your Custom Transport and Protection Plan
+            Your HAUS Plan
           </h1>
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
-            Experience HAUS’s unmatched precision and planning delivered instantly with our cutting-edge tech 
+            Experience HAUS’s unmatched precision and luxury—tailored to your world, delivered with cutting-edge tech.
           </p>
         </div>
       </section>
 
       <section ref={formRef} className="py-20 bg-black">
         <div className="container max-w-7xl mx-auto px-6 md:px-12 flex space-x-6">
-          {/* Logs Panel */}
           <motion.div
             initial="hidden"
             animate={formControls}
@@ -127,7 +126,6 @@ const RiskForm: React.FC = () => {
             ))}
           </motion.div>
 
-          {/* Form */}
           <motion.div
             initial="hidden"
             animate={formControls}
@@ -181,38 +179,30 @@ const RiskForm: React.FC = () => {
                 )}
               </div>
               <div className="space-y-2">
-                <Label htmlFor="when" className="text-gold font-medium">When</Label>
+                <Label htmlFor="briefDescription" className="text-gold font-medium">Brief Description</Label>
                 <Input
-                  id="when"
-                  type="date"
-                  value={when}
-                  onChange={(e) => setWhen(e.target.value)}
-                  className="w-full bg-black/50 border-gold/50 text-gold p-2 rounded hover:border-haus-burgundy transition"
-                />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="where" className="text-gold font-medium">Where</Label>
-                <Input
-                  id="where"
-                  value={where}
-                  onChange={(e) => setWhere(e.target.value)}
-                  placeholder="e.g., LAX to Downtown LA"
+                  id="briefDescription"
+                  value={briefDescription}
+                  onChange={(e) => setBriefDescription(e.target.value)}
+                  placeholder="e.g., Pickup from LAX, talk show, red carpet"
                   className="w-full bg-black/50 border-gold/50 text-gold placeholder-gray-500 p-2 rounded hover:border-haus-burgundy transition"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="priority" className="text-gold font-medium">Priority</Label>
-                <select
-                  id="priority"
-                  value={priority}
-                  onChange={(e) => setPriority(e.target.value)}
-                  className="w-full bg-black/50 border-gold/50 text-gold p-2 rounded hover:border-haus-burgundy transition"
-                >
-                  <option value="Luxury">Luxury</option>
-                  <option value="Safety">Safety</option>
-                  <option value="Privacy">Privacy</option>
-                  <option value="Speed">Speed</option>
-                </select>
+                <Label className="text-gold font-medium">Priority (Check All That Apply)</Label>
+                <div className="grid grid-cols-2 gap-2">
+                  {['Luxury', 'Safety', 'Privacy', 'Speed'].map((option) => (
+                    <label key={option} className="flex items-center space-x-2 text-gold">
+                      <input
+                        type="checkbox"
+                        checked={priorities.includes(option)}
+                        onChange={() => handlePriorityChange(option)}
+                        className="accent-haus-burgundy"
+                      />
+                      <span>{option}</span>
+                    </label>
+                  ))}
+                </div>
               </div>
               <Button
                 type="submit"
@@ -226,7 +216,6 @@ const RiskForm: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Report Output */}
         {report && (
           <motion.div
             ref={reportRef}
@@ -234,13 +223,29 @@ const RiskForm: React.FC = () => {
             animate={reportControls}
             variants={fadeInUpVariant}
             custom={2}
-            className="container max-w-7xl mx-auto px-6 md:px-12 mt-12 bg-black/70 border border-gold/50 p-8 rounded-md shadow-lg"
+            className="container max-w-7xl mx-auto px-6 md:px-12 mt-12"
           >
-            <h2 className="text-2xl font-semibold text-haus-burgundy mb-4">HAUS Mission Screen</h2>
-            <pre className="bg-black/30 p-6 rounded-md text-gold text-sm font-mono whitespace-pre-wrap max-h-[600px] overflow-y-auto border border-haus-burgundy/50">
-              {report}
-            </pre>
-            <form onSubmit={handleEmailSubmit} className="mt-6 flex space-x-4">
+            <div className="bg-black/80 backdrop-blur-md border border-gold/20 p-8 rounded-lg shadow-[0_0_15px_rgba(255,215,0,0.2)]">
+              <h2 className="text-2xl font-semibold text-haus-burgundy mb-4 tracking-wider">HAUS Mission Brief</h2>
+              <div className="text-gold text-sm font-mono leading-relaxed">
+                {report.split('\n\n').map((section, index) => (
+                  <div key={index} className="mb-6 last:mb-0">
+                    {section.split('\n').map((line, i) => (
+                      <p key={i} className={line.startsWith('**') ? 'text-lg font-bold text-white mb-2' : 'ml-2'}>
+                        {line.replace(/\*\*/g, '')}
+                      </p>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="mt-6 flex items-center justify-center space-x-3">
+              <Shield className="h-6 w-6 text-haus-burgundy" />
+              <p className="text-gold text-lg font-bold tracking-wide shadow-[0_0_10px_rgba(128,0,32,0.3)]">
+                Limited Offer: Up to 50% Off Your Elite HAUS Plan
+              </p>
+            </div>
+            <form onSubmit={handleEmailSubmit} className="mt-4 flex space-x-4">
               <Input
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

@@ -9,65 +9,45 @@ interface RiskAssessmentInput {
   whoYouAre: string;
   whatYouNeed: string;
   briefSpecifics: string;
-  when: string;
-  where: string;
-  priority: string;
+  briefDescription: string; // Replaces 'where'
+  priority: string; // Now a comma-separated list
 }
 
 export async function generateRiskAssessment(input: RiskAssessmentInput) {
   const prompt = `
-Generate a **custom 400-500 word HAUS Plan** tailored **exclusively** for **${input.whoYouAre}**, prioritizing **${input.priority}**, with precise details on **${input.whatYouNeed}** in **${input.where}** on **${input.when}**.  
+Generate a 600-700 word HAUS Luxury Elite Plan tailored exclusively for ${input.whoYouAre}, prioritizing ${input.priority}, with precise details on ${input.whatYouNeed} based on brief description: "${input.briefDescription}". Format as a sleek, high-tech operational brief:
 
-### **PLAN OVERVIEW**  
-#### **Title:**  
-“HAUS [${input.priority}-adjective] [${input.whatYouNeed}] Plan”  
-(e.g., “HAUS Elite Private Security Plan for NYC Gala Night” or “HAUS Seamless Luxury Airport Transfer for VIPs in Monaco”).  
+**HAUS [${input.priority.split(', ')[0]}-adjective] [${input.whatYouNeed}] Plan**  
+Designed for ${input.whoYouAre}. Optimized for ${input.priority}. Mission: Deliver ${input.whatYouNeed} with unmatched precision—${input.briefSpecifics ? `specifics: ${input.briefSpecifics}` : 'no additional specifics provided'}.
 
-#### **Client Snapshot:**  
-Designed **specifically** for **${input.whoYouAre}**, ensuring an optimized experience that prioritizes **${input.priority}**.  
+**HAUS EXECUTION**  
+Operational breakdown for ${input.briefDescription}:  
+1. **Pre-Event Readiness** – Custom strategy for ${input.briefDescription}.  
+2. **Arrival & Staging** – Seamless, secure, luxurious entry protocol.  
+3. **On-Ground Coordination** – Event-specific execution for ${input.whatYouNeed}.  
+4. **Contingency Protocol** – Real-time adaptation to risks or enhancements.  
+5. **Exit Strategy** – Smooth, secure departure and post-event wrap.  
 
-#### **Mission Briefing:**  
-A real-time **operational overview** based on:  
-- **Date & Time:** ${input.when}  
-- **Location-Specific Factors:** Key logistical or security considerations for **${input.where}**.  
-- **Unique Client Needs:** Personalized strategies for **${input.whatYouNeed}**, including any additional specifics: **${input.briefSpecifics}**.  
+🚘 **Mercedes-Benz GLC Coupes**: Exclusive fleet—chauffeured luxury transport (climate-controlled, privacy-enhanced) or armored security convoy (route-optimized).
 
-### **HAUS EXECUTION (Tailored Action Plan)**  
-A precise, **step-by-step operational breakdown** customized to **${input.whoYouAre}** and the unique demands of **${input.where}**.  
-1. **Pre-Event Readiness** – (Customized preparation strategy based on ${input.when} and ${input.where}).  
-2. **Arrival & Staging** – (How HAUS ensures a seamless, secure, or luxurious arrival experience).  
-3. **On-Ground Coordination** – (Personalized execution steps based on specific event, transfer, or security requirements).  
-4. **Adaptive Contingency Planning** – (Real-time risk mitigation or service enhancement plans for unforeseen factors).  
-5. **Departure & Post-Event Support** – (Ensuring smooth transitions, safety, and efficiency post-engagement).  
+**STRATEGIC EDGE**  
+- HAUS Tech: Advanced tools tailored to ${input.priority}.  
+- Live Intel: Simulated traffic, weather, local conditions (baseline: March 26, 2025).  
+- Elite Advantage: Unrivaled precision for ${input.whoYouAre} in ${input.briefDescription}.
 
-🚘 **Mercedes-Benz GLC Coupes** are the exclusive fleet vehicle, strategically positioned for:  
-- **Luxury Transport** – Chauffeured, climate-controlled, and privacy-enhanced experience.  
-- **Security Convoy** – Armored detailing and route optimization for safety-focused clients.  
-
-### **STRATEGIC EDGE**  
-- **HAUS Tools & Resources** – High-end technology, logistical expertise, and security measures personalized to **${input.priority}**.  
-- **Live Environmental Factors** – Contextual insights such as **simulated traffic, weather, and local conditions** (using March 26, 2025, as a baseline if date unspecified).  
-- **Competitive Advantage** – What makes HAUS **superior** in this specific scenario for **${input.whoYouAre}** in **${input.where}**.  
-
-### **CALL TO ACTION**  
-“Claim Your Exclusive HAUS Plan for **${input.where}** Now – Enter Your Email for VIP Access.”  
-
-### **TONE & STYLE**  
-✅ **Hyper-personalized, real-time adaptation** to location, timing, and individual user needs.  
-✅ **Luxe, high-authority language** that makes the user feel like an elite client.  
-✅ **Custom-tailored execution strategy** that directly reflects their event, priorities, and situation.  
+Use luxe, authoritative language. Keep it sleek, modern, high-tech—avoid clutter, excessive headings, or internal notes. Focus on a premium, actionable brief.
   `;
 
   try {
     const { text } = await generateText({
       model: groq('llama-3.3-70b-versatile'),
       prompt,
-      maxTokens: 4400, // Room for ~400-500 words
+      maxTokens: 2200,
     });
-    console.log('Groq response received:', text.substring(0, 100) + '...');
+    console.log('HAUS AI response received:', text.substring(0, 100) + '...');
     return text;
   } catch (error) {
-    console.error('Error generating report:', error);
-    return 'Error generating HAUS plan';
+    console.error('Groq Error:', error.message, error.stack);
+    return `Error: HAUS AI failed to generate plan - ${error.message}`;
   }
 }
