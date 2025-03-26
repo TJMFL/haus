@@ -97,7 +97,7 @@ const RiskForm: React.FC = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
-      <section className="pt-24 pb-16 bg-black">
+      <section className="pt-44 pb-16 bg-black">
         <div className="container max-w-7xl mx-auto px-4 md:px-12 text-center">
           <p className="text-haus-burgundy text-sm tracking-widest uppercase font-medium animate-fade-in">
             HAUS Elite Protection
