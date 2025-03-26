@@ -47,7 +47,7 @@ const Hero = ({ className }: HeroProps) => {
       
       {/* Content */}
       <div className="w-full pl-6 relative z-20">
-        {/* Refined Subtitle with White Text and Red Glow */}
+        {/* Refined Subtitle with White Text and Intense Red Glow */}
         <p className={`
           text-white 
           uppercase 
@@ -55,7 +55,7 @@ const Hero = ({ className }: HeroProps) => {
           text-sm 
           mb-2 
           font-semibold 
-          drop-shadow-[0_0_5px_theme('colors.haus-burgundy')]
+          drop-shadow-[0_0_10px_theme('colors.haus-burgundy')]
         `}>
           Premium Transportation & Security
         </p>
@@ -105,10 +105,12 @@ const Hero = ({ className }: HeroProps) => {
                 asChild
                 variant="outline" 
                 size="lg" 
-                className="bg-transparent border-white/30 hover:bg-white/10 text-white rounded-none luxury-transition"
+                className="bg-white/10 border-white/20 hover:bg-white/20 text-white rounded-none luxury-transition"
               >
                 <Link to="/risk-assessment">
-                  <span className="text-haus-burgundy">Free Custom HAUS Elite Plan</span> 
+                  <span className="text-white drop-shadow-[0_0_5px_theme('colors.haus-burgundy')]">
+                    Free Custom HAUS Elite Plan
+                  </span> 
                 </Link>
               </Button>
             </div>
