@@ -4,6 +4,7 @@ import { ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
+// Type definition for component props
 interface HeroProps {
   className?: string;
 }
@@ -46,8 +47,16 @@ const Hero = ({ className }: HeroProps) => {
       
       {/* Content */}
       <div className="w-full pl-6 relative z-20">
-        {/* Upper text */}
-        <p className="text-haus-burgundy uppercase tracking-widest text-sm mb-2 font-medium drop-shadow-[0_1px_1px_rgba(255,255,255,0.8)]">
+        {/* Refined Subtitle */}
+        <p className={`
+          text-haus-burgundy 
+          uppercase 
+          tracking-widest 
+          text-sm 
+          mb-2 
+          font-semibold 
+          text-shadow-[0_1px_3px_rgba(255,255,255,0.5)]
+        `}>
           Premium Transportation & Security
         </p>
         
@@ -57,10 +66,28 @@ const Hero = ({ className }: HeroProps) => {
             "transition-all duration-700 ease-out transform",
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           )}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            <h1 className={`
+              text-4xl 
+              md:text-5xl 
+              lg:text-6xl 
+              font-bold 
+              text-white 
+              mb-4 
+              tracking-tight 
+              leading-[1.1]
+              text-shadow-[0_2px_4px_rgba(0,0,0,0.3)]
+            `}>
               Luxury at Your Service
             </h1>
-            <p className="text-gray-300 text-lg mb-8 max-w-2xl">
+            <p className={`
+              text-gray-200 
+              text-lg 
+              mb-8 
+              max-w-2xl 
+              font-light 
+              tracking-wide 
+              leading-relaxed
+            `}>
               Elite transportation and professional security services tailored for discerning clients who value privacy, reliability, and sophistication.
             </p>
             
