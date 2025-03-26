@@ -26,7 +26,7 @@ const Hero = ({ className }: HeroProps) => {
       )}
     >
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/90 z-10" />
         <picture>
           <source 
             srcSet="/lovable-uploads/97ae4719-5b6e-4975-8783-098ea1b3c482.webp" 
@@ -49,8 +49,9 @@ const Hero = ({ className }: HeroProps) => {
           tracking-widest 
           text-sm 
           mb-2 
-          font-semibold 
-          shadow-burgundy
+          font-bold 
+          shadow-burgundy 
+          [text-shadow:0_0_2px_rgba(255,255,255,0.8)]
         `}>
           Premium Transportation & Security
         </p>
@@ -85,11 +86,11 @@ const Hero = ({ className }: HeroProps) => {
               Elite transportation and professional security services tailored for discerning clients who value privacy, reliability, and sophistication.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="mt-16 sm:mt-12 flex flex-col sm:flex-row gap-4">
               <Button 
                 asChild
                 size="lg" 
-                className="bg-haus-burgundy hover:bg-haus-burgundy/90 text-white rounded-none luxury-transition px-6"
+                className="px-4 sm:px-6 bg-haus-burgundy hover:bg-haus-burgundy/90 text-white rounded-none luxury-transition"
               >
                 <Link to="/booking">
                   Book Our Services <ChevronRight className="ml-2 h-4 w-4" />
@@ -99,10 +100,10 @@ const Hero = ({ className }: HeroProps) => {
                 asChild
                 variant="outline" 
                 size="lg" 
-                className="bg-white/40 border-white/40 hover:bg-white/80 text-haus-burgundy rounded-none luxury-transition"
+                className="px-4 sm:px-6 bg-white/40 border-white/40 hover:bg-white/80 text-white rounded-none luxury-transition"
               >
                 <Link to="/risk-assessment">
-                  <span className="text-haus-burgundy">
+                  <span className="text-white">
                     Free Custom HAUS Elite Plan
                   </span>
                 </Link>
