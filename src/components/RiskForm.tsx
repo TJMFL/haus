@@ -98,11 +98,11 @@ const RiskForm: React.FC = () => {
     <div className="min-h-screen bg-black text-white">
       <Navbar />
       <section className="pt-24 pb-16 bg-black">
-        <div className="container max-w-7xl mx-auto px-6 md:px-12 text-center">
+        <div className="container max-w-7xl mx-auto px-4 md:px-12 text-center">
           <p className="text-haus-burgundy text-sm tracking-widest uppercase font-medium animate-fade-in">
             HAUS Elite Protection
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold text-gold mt-4 animate-fade-in" style={{ animationDelay: '100ms' }}>
+          <h1 className="text-3xl md:text-5xl font-bold text-gold mt-4 animate-fade-in" style={{ animationDelay: '100ms' }}>
             Your HAUS Plan
           </h1>
           <p className="text-gray-400 mt-6 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
@@ -111,14 +111,14 @@ const RiskForm: React.FC = () => {
         </div>
       </section>
 
-      <section ref={formRef} className="py-20 bg-black">
-        <div className="container max-w-7xl mx-auto px-6 md:px-12 flex space-x-6">
+      <section ref={formRef} className="py-12 md:py-20 bg-black">
+        <div className="container max-w-7xl mx-auto px-4 md:px-12 space-y-6 md:space-y-0 md:flex md:space-x-6">
           <motion.div
             initial="hidden"
             animate={formControls}
             variants={fadeInUpVariant}
             custom={0}
-            className="w-1/4 bg-black/50 border border-haus-burgundy/50 p-4 rounded-md text-gold font-mono text-sm max-h-[600px] overflow-y-auto"
+            className="w-full md:w-1/4 bg-black/50 border border-haus-burgundy/50 p-4 rounded-md text-gold font-mono text-sm max-h-[400px] md:max-h-[600px] overflow-y-auto"
           >
             <h3 className="text-lg font-semibold text-haus-burgundy mb-2">HAUS Intel Feed</h3>
             {logs.map((log, index) => (
@@ -131,11 +131,11 @@ const RiskForm: React.FC = () => {
             animate={formControls}
             variants={fadeInUpVariant}
             custom={1}
-            className="w-3/4 bg-black/70 border border-gold/50 p-8 rounded-md shadow-lg"
+            className="w-full md:w-3/4 bg-black/70 border border-gold/50 p-6 md:p-8 rounded-md shadow-lg"
           >
             <div className="flex items-center mb-6">
               <Shield className="h-8 w-8 text-haus-burgundy mr-3" />
-              <h2 className="text-3xl font-bold text-gold">Define Your Mission</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gold">Define Your Mission</h2>
             </div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
@@ -190,7 +190,7 @@ const RiskForm: React.FC = () => {
               </div>
               <div className="space-y-2">
                 <Label className="text-gold font-medium">Priority (Check All That Apply)</Label>
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {['Luxury', 'Safety', 'Privacy', 'Speed'].map((option) => (
                     <label key={option} className="flex items-center space-x-2 text-gold">
                       <input
@@ -223,15 +223,15 @@ const RiskForm: React.FC = () => {
             animate={reportControls}
             variants={fadeInUpVariant}
             custom={2}
-            className="container max-w-7xl mx-auto px-6 md:px-12 mt-12"
+            className="container max-w-7xl mx-auto px-4 md:px-12 mt-8 md:mt-12"
           >
-            <div className="bg-black/80 backdrop-blur-md border border-gold/20 p-8 rounded-lg shadow-[0_0_15px_rgba(255,215,0,0.2)]">
-              <h2 className="text-2xl font-semibold text-haus-burgundy mb-4 tracking-wider">HAUS Mission Brief</h2>
+            <div className="bg-black/80 backdrop-blur-md border border-gold/20 p-6 md:p-8 rounded-lg shadow-[0_0_15px_rgba(255,215,0,0.2)]">
+              <h2 className="text-xl md:text-2xl font-semibold text-haus-burgundy mb-4 tracking-wider">HAUS Mission Brief</h2>
               <div className="text-gold text-sm font-mono leading-relaxed">
                 {report.split('\n\n').map((section, index) => (
                   <div key={index} className="mb-6 last:mb-0">
                     {section.split('\n').map((line, i) => (
-                      <p key={i} className={line.startsWith('**') ? 'text-lg font-bold text-white mb-2' : 'ml-2'}>
+                      <p key={i} className={line.startsWith('**') ? 'text-base md:text-lg font-bold text-white mb-2' : 'ml-2'}>
                         {line.replace(/\*\*/g, '')}
                       </p>
                     ))}
@@ -239,13 +239,13 @@ const RiskForm: React.FC = () => {
                 ))}
               </div>
             </div>
-            <div className="mt-6 flex items-center justify-center space-x-3">
+            <div className="mt-6 flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-3">
               <Shield className="h-6 w-6 text-haus-burgundy" />
-              <p className="text-gold text-lg font-bold tracking-wide shadow-[0_0_10px_rgba(128,0,32,0.3)]">
+              <p className="text-gold text-base md:text-lg font-bold tracking-wide shadow-[0_0_10px_rgba(128,0,32,0.3)] text-center">
                 Limited Offer: Up to 50% Off Your Elite HAUS Plan
               </p>
             </div>
-            <form onSubmit={handleEmailSubmit} className="mt-4 flex space-x-4">
+            <form onSubmit={handleEmailSubmit} className="mt-4 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
               <Input
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
