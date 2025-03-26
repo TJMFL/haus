@@ -6,15 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .shadow-burgundy {
-    filter: drop-shadow(0 0 10px theme('colors.haus-burgundy'));
-  }
-  .shadow-burgundy-sm {
-    filter: drop-shadow(0 0 5px theme('colors.haus-burgundy'));
-  }
-}
-
 @layer base {
   :root {
     --background: 0 0% 3%;
@@ -76,6 +67,14 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .shadow-burgundy {
+    filter: drop-shadow(0 0 10px theme('colors.haus-burgundy'));
+  }
+  
+  .shadow-burgundy-sm {
+    filter: drop-shadow(0 0 5px theme('colors.haus-burgundy'));
   }
   
   .glass-card {
