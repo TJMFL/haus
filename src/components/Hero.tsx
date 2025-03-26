@@ -99,7 +99,7 @@ const Hero = ({ className }: HeroProps) => {
                 asChild
                 variant="outline" 
                 size="lg" 
-                className="bg-white/10 border-white/20 hover:bg-white/20 text-haus-burgundy rounded-none luxury-transition"
+                className="bg-white/25 border-white/25 hover:bg-white/45 text-haus-burgundy rounded-none luxury-transition"
               >
                 <Link to="/risk-assessment">
                   <span className="text-haus-burgundy">
