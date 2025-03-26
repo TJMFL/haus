@@ -10,6 +10,9 @@
   .shadow-burgundy {
     filter: drop-shadow(0 0 10px theme('colors.haus-burgundy'));
   }
+  .shadow-burgundy-sm {
+    filter: drop-shadow(0 0 5px theme('colors.haus-burgundy'));
+  }
 }
 
 @layer base {
