@@ -29,11 +29,19 @@ const Hero = ({ className }: HeroProps) => {
       {/* Hero Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/90 z-10" />
-        <img
-          src="/lovable-uploads/97ae4719-5b6e-4975-8783-098ea1b3c482.png"
-          alt="Luxury Mercedes SUV"
-          className="w-full h-full object-cover object-center"
-        />
+        <picture>
+          <source 
+            srcSet="/lovable-uploads/97ae4719-5b6e-4975-8783-098ea1b3c482.webp" 
+            type="image/webp" 
+          />
+          <img
+            src="/lovable-uploads/97ae4719-5b6e-4975-8783-098ea1b3c482.png"
+            alt="Luxury Mercedes SUV"
+            className="w-full h-full object-cover object-center"
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
       </div>
       
       {/* Content */}
